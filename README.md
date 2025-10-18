@@ -58,6 +58,9 @@ SELECT *
 FROM retail_sales
 LIMIT 10;
 
+CHECK FOR THE UNIQUE CUSTOMERS
+SELECT count(distinct(customer_id)) as total_sales from retail_sales;
+
 CHECK FOR NULL VALUES
 SELECT *
 FROM retail_sales
