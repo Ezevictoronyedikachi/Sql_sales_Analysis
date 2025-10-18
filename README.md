@@ -53,21 +53,21 @@ SELECT
 	COUNT(*)
 FROM retail_sales;
 
-Take a description of the data by seeing the top 10 headers
+-- Take a description of the data by seeing the top 10 headers
 SELECT *
 FROM retail_sales
 LIMIT 10;
 
-CHECK FOR THE UNIQUE CUSTOMERS
+-- CHECK FOR THE UNIQUE CUSTOMERS
 SELECT count(distinct(customer_id)) as total_sales from retail_sales;
 
-CHECK FOR NULL VALUES
+-- CHECK FOR NULL VALUES
 SELECT *
 FROM retail_sales
 WHERE	transactions_id is null or sale_date is null or sale_time is null or customer_id is null or gender is null or age is null or category is null
     or  quantiy is null or price_per_unit is null or cogs is null  or total_sale is null;
 
-DELETE NULL ROWS
+-- DELETE NULL ROWS
     DELETE FROM retail_sales
     WHERE
 	transactions_id is null or sale_date is null or sale_time is null or  customer_id is null or  gender is null or age is null
