@@ -62,7 +62,7 @@ LIMIT 10;
 SELECT count(distinct(customer_id)) as total_sales from retail_sales;
 
 --CHECK FOR UNIQUE PRODUCT CATEGORIES
-SELECT DISTINCT category FROM retail_sales;
+SELECT distinct(category) as distinct_categories from retail_sales;
 
 -- CHECK FOR NULL VALUES
 SELECT *
@@ -80,3 +80,8 @@ WHERE	transactions_id is null or sale_date is null or sale_time is null or custo
 ### 3. Data Analysis & Findings
 > - The following SQL queries were developed to answer specific business questions:
 1. **Write a SQL query to retrieve all columns for sales made on '2022-11-05:**
+```sql
+   SELECT *
+	FROM retail_sales
+	WHERE sale_date = '2022/11/05';
+```
