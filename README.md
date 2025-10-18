@@ -45,7 +45,7 @@ CREATE TABLE retail_sales (
 2. Data Exploration & Cleaning
 > - **Record Count:** Determine the total number of records in the dataset.
 > - **Customer Count:** Find out how many unique customers are in the dataset.
-> - **Category Count:** Identify all unique product categories in the dataset.
+> - **Product Category:** Identify all unique product categories in the dataset.
 > - **Null Value Check:** Check for any null values in the dataset and delete records with missing data.
 
 ```sql
@@ -60,6 +60,9 @@ LIMIT 10;
 
 -- CHECK FOR THE UNIQUE CUSTOMERS
 SELECT count(distinct(customer_id)) as total_sales from retail_sales;
+
+--CHECK FOR UNIQUE PRODUCT CATEGORIES
+SELECT DISTINCT category FROM retail_sales;
 
 -- CHECK FOR NULL VALUES
 SELECT *
